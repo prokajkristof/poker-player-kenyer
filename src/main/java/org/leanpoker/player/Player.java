@@ -5,7 +5,7 @@ import com.google.gson.JsonElement;
 
 public class Player {
 
-    static final String VERSION = "Gyuri bacsi";
+    static final String VERSION = "2.0";
 
     public static int betRequest(String s) {
         Service service = new Service();
@@ -16,7 +16,6 @@ public class Player {
 
 
         try{
-
             System.out.println(pokerRequest.toString());
 
         /*if(myPlayer.stack > service.biggestStack(pokerRequest)){
