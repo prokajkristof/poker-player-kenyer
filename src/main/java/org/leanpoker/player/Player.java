@@ -9,11 +9,13 @@ public class Player {
 
     public static int betRequest(JsonElement request) {
         Service service = new Service();
-        try{
-
         Gson gson = new Gson();
         LeanPokerRequest pokerRequest = gson.fromJson(request.toString(),LeanPokerRequest.class);
         PlayerModel myPlayer = service.getMyPlayer(pokerRequest);
+
+        try{
+
+
         /*if(myPlayer.stack > service.biggestStack(pokerRequest)){
             return service.biggestStack(pokerRequest);
         }
@@ -33,7 +35,9 @@ public class Player {
         return pokerRequest.currentBuyIn;
         }catch (Exception e){
             System.out.println("EXCEPTION ---------------> " + e.getMessage());
-            return 0;
+
+        }finally {
+            return pokerRequest.currentBuyIn;
         }
     }
 
