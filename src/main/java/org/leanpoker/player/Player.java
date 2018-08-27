@@ -8,7 +8,7 @@ public class Player {
 
     public static int betRequest(JsonElement request) {
         
-        System.out.println(request.getAsJsonArray());
+
 
         return 10;
     }
