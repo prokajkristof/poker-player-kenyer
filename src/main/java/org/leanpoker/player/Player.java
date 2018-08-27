@@ -7,11 +7,11 @@ public class Player {
     static final String VERSION = "Default Java folding player";
 
     public static int betRequest(JsonElement request) {
+        return 10;
         System.out.println(request.getAsJsonArray());
         return 0;
     }
 
     public static void showdown(JsonElement game) {
-
     }
 }
