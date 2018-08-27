@@ -29,4 +29,12 @@ public class Service {
         }
         return null;
     }
+
+    public boolean searchThreeOfKind(LeanPokerRequest pokerRequest){
+        PlayerModel myPlayer = getMyPlayer(pokerRequest);
+        Card[] myCards = myPlayer.hole_cards;
+        Card[] communityCards = pokerRequest.communityCards;
+        return false;
+
+    }
 }
