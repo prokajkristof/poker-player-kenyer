@@ -8,12 +8,19 @@ public class Player {
     static final String VERSION = "Gyuri bacsi";
 
     public static int betRequest(JsonElement request) {
-        System.out.println(request.isJsonObject());
+        try{
 
         Gson gson = new Gson();
         LeanPokerRequest pokerRequest = gson.fromJson(request.toString(),LeanPokerRequest.class);
-        System.out.println(pokerRequest.players[0].name);
+        for(PlayerModel player : pokerRequest.players){
+            if(player.name.equals("Kenyer")){
+                System.out.println("////////////////////////////////////////////"+player);
+            }
+        }
         return 210;
+        }catch (Exception e){
+            return 0;
+        }
     }
 
     public static void showdown(JsonElement game) {
