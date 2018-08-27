@@ -14,10 +14,10 @@ public class Player {
         LeanPokerRequest pokerRequest = gson.fromJson(request.toString(),LeanPokerRequest.class);
         PlayerModel myPlayer = new Player().getMyPlayer(pokerRequest);
 
-        if(myPlayer.hole_cards[0].rank.equals(myPlayer.hole_cards[1].rank) || myPlayer.hole_cards[0].suit.equals(myPlayer.hole_cards[1].suit)){
+        if(myPlayer.hole_cards[0].rank.equals(myPlayer.hole_cards[1].rank) || myPlayer.hole_cards[0].suit.equals(myPlayer.hole_cards[1].suit) || (new Player().convertCardRankToValue(myPlayer.hole_cards[0])+new Player().convertCardRankToValue(myPlayer.hole_cards[0]))>=22){
             return pokerRequest.currentBuyIn;
         }
-        return 210;
+        return 0;
         }catch (Exception e){
             return 0;
         }
