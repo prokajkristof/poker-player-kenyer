@@ -7,14 +7,14 @@ public class LeanPokerRequest {
     String tournamentId;
     String gameId;
     int round;
-    int betIndex;
-    int smallBlind;
+    int bet_index;
+    int smallb_lind;
     int orbits;
     int dealer;
     Card[] community_cards;
     int current_buy_in;
     int pot;
-    int minimumRaise;
+    int minimumr_aise;
 
     @Override
     public String toString() {
@@ -23,14 +23,14 @@ public class LeanPokerRequest {
                 ", tournamentId='" + tournamentId + '\'' +
                 ", gameId='" + gameId + '\'' +
                 ", round=" + round +
-                ", betIndex=" + betIndex +
-                ", smallBlind=" + smallBlind +
+                ", bet_index=" + bet_index +
+                ", smallb_lind=" + smallb_lind +
                 ", orbits=" + orbits +
                 ", dealer=" + dealer +
                 ", community_cards=" + Arrays.toString(community_cards) +
                 ", current_buy_in=" + current_buy_in +
                 ", pot=" + pot +
-                ", minimumRaise=" + minimumRaise +
+                ", minimumr_aise=" + minimumr_aise +
                 '}';
     }
 }

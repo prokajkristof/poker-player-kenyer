@@ -36,12 +36,12 @@ public class Player {
         }*/
 
 
-        return 980;
+        return 995;
         }catch (Throwable e){
             System.out.println("EXCEPTION ---------------> " + e);
 
         }finally {
-            return 970;
+            return 995;
         }
     }
 
