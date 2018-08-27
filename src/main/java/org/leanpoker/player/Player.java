@@ -12,6 +12,7 @@ public class Player {
         Gson gson = new Gson();
         LeanPokerRequest pokerRequest = gson.fromJson(request.toString(),LeanPokerRequest.class);
         PlayerModel myPlayer = service.getMyPlayer(pokerRequest);
+        System.out.println(pokerRequest.currentBuyIn);
 
         try{
 
