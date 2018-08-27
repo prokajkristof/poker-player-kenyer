@@ -14,7 +14,7 @@ public class Player {
         Gson gson = new Gson();
         LeanPokerRequest pokerRequest = gson.fromJson(request.toString(),LeanPokerRequest.class);
         PlayerModel myPlayer = service.getMyPlayer(pokerRequest);
-        if(myPlayer.stack > service.biggestStack(pokerRequest)){
+        /*if(myPlayer.stack > service.biggestStack(pokerRequest)){
             return service.biggestStack(pokerRequest);
         }
         System.out.println("BEFORE IF");
@@ -29,7 +29,7 @@ public class Player {
         else if((service.convertCardRankToValue(myPlayer.hole_cards[0]) + service.convertCardRankToValue(myPlayer.hole_cards[1]))>=22){
             System.out.println("IN THIRD IF");
             return pokerRequest.currentBuyIn;
-        }
+        }*/
         return pokerRequest.currentBuyIn;
         }catch (Exception e){
             System.out.println("EXCEPTION ---------------> " + e.getMessage());
