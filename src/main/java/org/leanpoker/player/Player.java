@@ -33,9 +33,11 @@ public class Player {
             System.out.println("IN THIRD IF");
             return pokerRequest.current_buy_in;
         }
+        System.out.println(service.convertCardRankToValue(myPlayer.hole_cards[0])+"      "+service.convertCardRankToValue(myPlayer.hole_cards[1]));
 
 
-        return 0;
+
+            return 0;
         }catch (Throwable e){
             System.out.println("EXCEPTION ---------------> " + e);
 
