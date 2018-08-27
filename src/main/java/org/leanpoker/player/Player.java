@@ -14,7 +14,7 @@ public class Player {
         LeanPokerRequest pokerRequest = gson.fromJson(request.toString(),LeanPokerRequest.class);
         for(PlayerModel player : pokerRequest.players){
             if(player.name.equals("Kenyer")){
-                System.out.println("////////////////////////////////////////////"+player);
+                System.out.println("////////////////////////////////////////////"+player.name);
             }
         }
         return 210;
