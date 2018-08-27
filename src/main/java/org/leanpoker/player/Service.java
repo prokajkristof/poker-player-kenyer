@@ -53,7 +53,8 @@ public class Service {
     public int biggestStack(LeanPokerRequest pokerRequest){
         int stack = 0;
         for(PlayerModel player : pokerRequest.players){
-            if(player.stack >= stack){
+
+            if(!player.name.equals("Kenyer") && player.stack >= stack){
                 stack = player.stack;
             }
         }

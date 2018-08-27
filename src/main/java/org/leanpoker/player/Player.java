@@ -17,7 +17,7 @@ public class Player {
         if(myPlayer.stack > service.biggestStack(pokerRequest)){
             return service.biggestStack(pokerRequest);
         }
-
+        System.out.println();
         if(myPlayer.hole_cards[0].rank.equals(myPlayer.hole_cards[1].rank)){
             return pokerRequest.currentBuyIn;
         }
