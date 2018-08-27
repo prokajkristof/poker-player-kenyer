@@ -9,6 +9,7 @@ public class Player {
     public static int betRequest(JsonElement request) {
         System.out.println(request.isJsonObject());
 
+
         return 0;
     }
 
