@@ -33,12 +33,16 @@ public class Player {
             System.out.println("IN THIRD IF");
             return pokerRequest.currentBuyIn;
         }*/
-            for(Card card: pokerRequest.community_cards) {
+        if(pokerRequest.community_cards==null){
+            System.out.println("null vagyok");
+        }
+            for(Card card: myPlayer.hole_cards) {
                 System.out.println(card.rank+" "+card.suit);
             }
+
         return 950;
         }catch (Exception e){
-            System.out.println("EXCEPTION ---------------> " + e.getMessage());
+            System.out.println("EXCEPTION ---------------> " + e);
 
         }finally {
             return 950;
