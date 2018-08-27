@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class LeanPokerRequest {
     PlayerModel[] players;
-    String tournamentId;
-    String gameId;
+    String tournament_id;
+    String game_id;
     int round;
     int bet_index;
     int small_blind;
@@ -20,8 +20,8 @@ public class LeanPokerRequest {
     public String toString() {
         return "LeanPokerRequest{" +
                 "players=" + Arrays.toString(players) +
-                ", tournamentId='" + tournamentId + '\'' +
-                ", gameId='" + gameId + '\'' +
+                ", tournamentId='" + tournament_id + '\'' +
+                ", gameId='" + game_id + '\'' +
                 ", round=" + round +
                 ", bet_index=" + bet_index +
                 ", smallb_lind=" + small_blind +
