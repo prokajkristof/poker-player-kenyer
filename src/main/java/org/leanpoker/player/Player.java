@@ -5,7 +5,7 @@ import com.google.gson.JsonElement;
 
 public class Player {
 
-    static final String VERSION = "3.0";
+    static final String VERSION = "4.0";
 
     public static int betRequest(String s) {
         Service service = new Service();
@@ -41,7 +41,7 @@ public class Player {
         }
 
 
-        return 0;
+            return 0;
         }catch (Throwable e){
             System.out.println("EXCEPTION ---------------> " + e);
 
