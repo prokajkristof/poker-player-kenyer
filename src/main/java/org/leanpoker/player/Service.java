@@ -49,14 +49,26 @@ public class Service {
     }
 
     public boolean searchPairs(LeanPokerRequest pokerRequest) {
-        Card[] cards = pokerRequest.communityCards;
-        Card first = getMyPlayer(pokerRequest).hole_cards[0];
-        Card second = getMyPlayer(pokerRequest).hole_cards[1];
-
-        if (cards[0].rank.equals(first.rank) || cards[0].rank.equals(second.rank) || cards[1].rank.equals(first.rank) || cards[1].rank.equals(second.rank) || cards[2].rank.equals(first.rank) || cards[2].rank.equals(second.rank) || first.rank.equals(second.rank)) {
-            return true;
-        } else {
+        try {
+            Card[] cards = pokerRequest.communityCards;
+            Card first = getMyPlayer(pokerRequest).hole_cards[0];
+            Card second = getMyPlayer(pokerRequest).hole_cards[1];
+            if (cards[2].rank.equals(second.rank)) {
+                return true;
+            }
+            if (cards.length != 0) {
+                if (cards[0].rank.equals(first.rank) || cards[0].rank.equals(second.rank) || cards[1].rank.equals(first.rank) || cards[1].rank.equals(second.rank) || cards[2].rank.equals(first.rank) || cards[2].rank.equals(second.rank)) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                return false;
+            }
+        }catch (Exception e){
             return false;
         }
+
+
     }
 }
