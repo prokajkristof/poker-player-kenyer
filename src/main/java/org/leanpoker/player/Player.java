@@ -44,9 +44,7 @@ public class Player {
             return 0;
         }catch (Throwable e){
             System.out.println("EXCEPTION ---------------> " + e);
-
-        }finally {
-            return 0;
+return 0;
         }
     }
 
