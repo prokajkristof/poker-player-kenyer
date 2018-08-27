@@ -13,7 +13,7 @@ public class Player {
         Gson gson = new Gson();
         LeanPokerRequest pokerRequest = gson.fromJson(request.toString(),LeanPokerRequest.class);
         System.out.println(pokerRequest.players[0].name);
-        return 10;
+        return 210;
     }
 
     public static void showdown(JsonElement game) {
