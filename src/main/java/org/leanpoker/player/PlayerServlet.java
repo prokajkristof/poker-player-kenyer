@@ -31,7 +31,7 @@ public class PlayerServlet extends HttpServlet {
         }
         if (req.getParameter("action").equals("version")) {
             resp.getWriter().print(Player.VERSION);
-            
+
         }
     }
 }
