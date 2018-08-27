@@ -5,7 +5,7 @@ import com.google.gson.JsonElement;
 
 public class Player {
 
-    static final String VERSION = "3.0";
+    static final String VERSION = "4.0";
 
     public static int betRequest(String s) {
         Service service = new Service();
@@ -16,14 +16,11 @@ public class Player {
 
 
         try{
-            for(Card card:myPlayer.hole_cards){
-                System.out.println(card.rank+" "+card.suit);
-            }
 
         if(myPlayer.stack > service.biggestStack(pokerRequest)){
             return service.biggestStack(pokerRequest);
         }
-        System.out.println("BEFORE IF");
+            System.out.println(myPlayer.hole_cards[0].rank+"     "+myPlayer.hole_cards[1].rank);
         if(myPlayer.hole_cards[0].rank.equals(myPlayer.hole_cards[1].rank)){
             System.out.println("IN FIRST IF");
             return pokerRequest.current_buy_in;
