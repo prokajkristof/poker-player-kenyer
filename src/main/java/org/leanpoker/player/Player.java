@@ -20,10 +20,10 @@ public class Player {
                 System.out.println(card.rank+" "+card.suit);
             }
 
-        if(myPlayer.stack > service.biggestStack(pokerRequest)){
+        /*if(myPlayer.stack > service.biggestStack(pokerRequest)){
             return service.biggestStack(pokerRequest);
         } else {
-
+*/
             System.out.println("BEFORE IF");
 
             if(myPlayer.hole_cards[0].rank.equals(myPlayer.hole_cards[1].rank)){
@@ -37,14 +37,14 @@ public class Player {
             else if((service.convertCardRankToValue(myPlayer.hole_cards[0]) + service.convertCardRankToValue(myPlayer.hole_cards[1]))>=22){
                 System.out.println("IN THIRD IF");
                 return pokerRequest.current_buy_in;
-            }
+
         }
 
 
             return 0;
         }catch (Throwable e){
             System.out.println("EXCEPTION ---------------> " + e);
-return 0;
+            return 0;
         }
     }
 
