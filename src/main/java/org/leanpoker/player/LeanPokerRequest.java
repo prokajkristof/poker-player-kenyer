@@ -9,7 +9,7 @@ public class LeanPokerRequest {
     int smallBlind;
     int orbits;
     int dealer;
-    Card[] communityCards;
+    Card[] community_cards;
     int currentBuyIn;
     int pot;
     int minimumRaise;
