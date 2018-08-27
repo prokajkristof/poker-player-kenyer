@@ -30,10 +30,7 @@ public class Player {
                 System.out.println("IN FIRST IF");
                 return pokerRequest.current_buy_in;
             }
-            else if(myPlayer.hole_cards[0].suit.equals(myPlayer.hole_cards[1].suit)){
-                System.out.println("IN SECOND IF");
-                return pokerRequest.current_buy_in;
-            }
+            
             else if((service.convertCardRankToValue(myPlayer.hole_cards[0]) + service.convertCardRankToValue(myPlayer.hole_cards[1]))>=20){
                 System.out.println("IN THIRD IF");
                 return pokerRequest.current_buy_in;
