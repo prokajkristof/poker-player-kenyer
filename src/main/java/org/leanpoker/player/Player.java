@@ -12,7 +12,6 @@ public class Player {
         Gson gson = new Gson();
         LeanPokerRequest pokerRequest = gson.fromJson(request.toString(),LeanPokerRequest.class);
         PlayerModel myPlayer = service.getMyPlayer(pokerRequest);
-        System.out.println(pokerRequest.current_buy_in);
 
         try{
 
@@ -33,12 +32,9 @@ public class Player {
             System.out.println("IN THIRD IF");
             return pokerRequest.currentBuyIn;
         }*/
-        if(pokerRequest.community_cards==null){
-            System.out.println("null vagyok");
+        for(PlayerModel player: pokerRequest.players) {
+            System.out.println(player.name);
         }
-            for(Card card: myPlayer.hole_cards) {
-                System.out.println(card.rank+" "+card.suit);
-            }
 
         return 950;
         }catch (Exception e){
