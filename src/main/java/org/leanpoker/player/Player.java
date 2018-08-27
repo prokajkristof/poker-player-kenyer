@@ -16,21 +16,15 @@ public class Player {
             if(player.name.equals("Kenyer")){
                 System.out.println("////////////////////////////////////////////"+player.name);
             }
-            if(player.stack > 1000){
-                System.out.println("stack >1000; bet -------------------------- 400");
-                return 400;
-            }
-            else if(player.stack > 600){
-                System.out.println("stack >600; bet -------------------------- 300");
-                return 300;
+            if(player.stack > 1000 ){
+                return 810;
             }
             else {
-                System.out.println("stack <600; bet -------------------------- 210");
-                return 210;
+                return 0;
             }
         }
 
-        return 210;
+        return 0;
         }catch (Exception e){
             return 0;
         }
