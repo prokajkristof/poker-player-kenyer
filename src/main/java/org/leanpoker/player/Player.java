@@ -4,7 +4,7 @@ import com.google.gson.JsonElement;
 
 public class Player {
 
-    static final String VERSION = "Default Java folding player";
+    static final String VERSION = "Gyuri bacsi";
 
     public static int betRequest(JsonElement request) {
         System.out.println(request.isJsonObject());
