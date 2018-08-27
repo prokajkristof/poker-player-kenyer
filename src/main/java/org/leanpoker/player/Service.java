@@ -32,10 +32,22 @@ public class Service {
 
     public boolean searchThreeOfKind(LeanPokerRequest pokerRequest){
         PlayerModel myPlayer = getMyPlayer(pokerRequest);
+        String matchRank = "";
         Card[] myCards = myPlayer.hole_cards;
         Card[] communityCards = pokerRequest.communityCards;
-        return false;
+        int counter = 0;
+        for(Card myCard: myCards){
+            for(Card communityCard:communityCards){
+                if (myCard.rank.equals(communityCard.rank)){
+                    counter++;
+                }
+            }
+        }
 
+        if(counter>=2){
+            return true;
+        }
+        return false;
     }
 
     public int biggestStack(LeanPokerRequest pokerRequest){
