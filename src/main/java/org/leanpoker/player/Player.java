@@ -16,7 +16,9 @@ public class Player {
 
 
         try{
-            System.out.println(pokerRequest.toString());
+            for(Card card:myPlayer.hole_cards){
+                System.out.println(card.rank+" "+card.suit);
+            }
 
         if(myPlayer.stack > service.biggestStack(pokerRequest)){
             return service.biggestStack(pokerRequest);
