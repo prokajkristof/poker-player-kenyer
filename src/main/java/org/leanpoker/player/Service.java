@@ -34,7 +34,7 @@ public class Service {
         PlayerModel myPlayer = getMyPlayer(pokerRequest);
         String matchRank = "";
         Card[] myCards = myPlayer.hole_cards;
-        Card[] communityCards = pokerRequest.communityCards;
+        Card[] communityCards = pokerRequest.community_cards;
         int counter = 0;
         for(Card myCard: myCards){
             for(Card communityCard:communityCards){
@@ -63,7 +63,7 @@ public class Service {
 
     public boolean searchPairs(LeanPokerRequest pokerRequest) {
         try {
-            Card[] cards = pokerRequest.communityCards;
+            Card[] cards = pokerRequest.community_cards;
             Card first = getMyPlayer(pokerRequest).hole_cards[0];
             Card second = getMyPlayer(pokerRequest).hole_cards[1];
             if (cards[2].rank.equals(second.rank)) {
