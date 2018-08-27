@@ -33,7 +33,9 @@ public class Player {
             System.out.println("IN THIRD IF");
             return pokerRequest.currentBuyIn;
         }*/
-            System.out.println(pokerRequest.minimumRaise);
+            for(Card card: pokerRequest.communityCards) {
+                System.out.println(card.rank+" "+card.suit);
+            }
         return pokerRequest.minimumRaise;
         }catch (Exception e){
             System.out.println("EXCEPTION ---------------> " + e.getMessage());
