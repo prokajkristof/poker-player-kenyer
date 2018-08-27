@@ -13,8 +13,11 @@ public class Player {
         LeanPokerRequest pokerRequest = gson.fromJson(request.toString(),LeanPokerRequest.class);
         PlayerModel myPlayer = service.getMyPlayer(pokerRequest);
 
+
+
         try{
 
+            System.out.println(pokerRequest.toString());
 
         /*if(myPlayer.stack > service.biggestStack(pokerRequest)){
             return service.biggestStack(pokerRequest);
@@ -32,9 +35,7 @@ public class Player {
             System.out.println("IN THIRD IF");
             return pokerRequest.currentBuyIn;
         }*/
-        for(PlayerModel player: pokerRequest.players) {
-            System.out.println(player.name);
-        }
+
 
         return 950;
         }catch (Exception e){
