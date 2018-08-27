@@ -37,4 +37,14 @@ public class Service {
         return false;
 
     }
+
+    public int biggestStack(LeanPokerRequest pokerRequest){
+        int stack = 0;
+        for(PlayerModel player : pokerRequest.players){
+            if(player.stack >= stack){
+                stack = player.stack;
+            }
+        }
+        return stack;
+    }
 }
