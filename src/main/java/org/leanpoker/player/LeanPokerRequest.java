@@ -8,13 +8,13 @@ public class LeanPokerRequest {
     String gameId;
     int round;
     int bet_index;
-    int smallb_lind;
+    int small_blind;
     int orbits;
     int dealer;
     Card[] community_cards;
     int current_buy_in;
     int pot;
-    int minimumr_aise;
+    int minimum_raise;
 
     @Override
     public String toString() {
@@ -24,13 +24,13 @@ public class LeanPokerRequest {
                 ", gameId='" + gameId + '\'' +
                 ", round=" + round +
                 ", bet_index=" + bet_index +
-                ", smallb_lind=" + smallb_lind +
+                ", smallb_lind=" + small_blind +
                 ", orbits=" + orbits +
                 ", dealer=" + dealer +
                 ", community_cards=" + Arrays.toString(community_cards) +
                 ", current_buy_in=" + current_buy_in +
                 ", pot=" + pot +
-                ", minimumr_aise=" + minimumr_aise +
+                ", minimumr_aise=" + minimum_raise +
                 '}';
     }
 }
