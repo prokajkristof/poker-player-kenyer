@@ -12,4 +12,5 @@ public class LeanPokerRequest {
     Card[] communityCards;
     int currentBuyIn;
     int pot;
+    int minimumRaise;
 }

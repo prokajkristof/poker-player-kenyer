@@ -33,12 +33,12 @@ public class Player {
             System.out.println("IN THIRD IF");
             return pokerRequest.currentBuyIn;
         }*/
-        return 950;
+        return pokerRequest.minimumRaise;
         }catch (Exception e){
             System.out.println("EXCEPTION ---------------> " + e.getMessage());
 
         }finally {
-            return 950;
+            return pokerRequest.minimumRaise;
         }
     }
 
