@@ -21,7 +21,7 @@ public class Player {
         if(myPlayer.stack >= service.biggestStack(pokerRequest)){
             return service.biggestStack(pokerRequest);
         }
-        return myPlayer.stack;
+        return pokerRequest.currentBuyIn;
         }catch (Exception e){
             return 0;
         }
