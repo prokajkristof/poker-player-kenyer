@@ -7,10 +7,10 @@ public class Player {
 
     static final String VERSION = "Gyuri bacsi";
 
-    public static int betRequest(JsonElement request) {
+    public static int betRequest(String s) {
         Service service = new Service();
         Gson gson = new Gson();
-        LeanPokerRequest pokerRequest = gson.fromJson(request.toString(),LeanPokerRequest.class);
+        LeanPokerRequest pokerRequest = gson.fromJson(s, LeanPokerRequest.class);
         PlayerModel myPlayer = service.getMyPlayer(pokerRequest);
 
 
@@ -38,7 +38,7 @@ public class Player {
 
 
         return 950;
-        }catch (Exception e){
+        }catch (Throwable e){
             System.out.println("EXCEPTION ---------------> " + e);
 
         }finally {
