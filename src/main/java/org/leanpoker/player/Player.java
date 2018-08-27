@@ -18,9 +18,9 @@ public class Player {
         try{
             System.out.println(pokerRequest.toString());
 
-        /*if(myPlayer.stack > service.biggestStack(pokerRequest)){
+        if(myPlayer.stack > service.biggestStack(pokerRequest)){
             return service.biggestStack(pokerRequest);
-        }
+        }/*
         System.out.println("BEFORE IF");
         if(myPlayer.hole_cards[0].rank.equals(myPlayer.hole_cards[1].rank)){
             System.out.println("IN FIRST IF");
