@@ -30,6 +30,24 @@ public class Service {
         return null;
     }
 
+    public boolean searchThreeOfKind(LeanPokerRequest pokerRequest){
+        PlayerModel myPlayer = getMyPlayer(pokerRequest);
+        Card[] myCards = myPlayer.hole_cards;
+        Card[] communityCards = pokerRequest.communityCards;
+        return false;
+
+    }
+
+    public int biggestStack(LeanPokerRequest pokerRequest){
+        int stack = 0;
+        for(PlayerModel player : pokerRequest.players){
+            if(player.stack >= stack){
+                stack = player.stack;
+            }
+        }
+        return stack;
+    }
+
     public boolean searchPairs(LeanPokerRequest pokerRequest) {
         Card[] cards = pokerRequest.communityCards;
         Card first = getMyPlayer(pokerRequest).hole_cards[0];
