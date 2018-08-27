@@ -5,7 +5,7 @@ import com.google.gson.JsonElement;
 
 public class Player {
 
-    static final String VERSION = "4.0";
+    static final String VERSION = "5.0";
 
     public static int betRequest(String s) {
         Service service = new Service();
@@ -34,7 +34,7 @@ public class Player {
                 System.out.println("IN SECOND IF");
                 return pokerRequest.current_buy_in;
             }
-            else if((service.convertCardRankToValue(myPlayer.hole_cards[0]) + service.convertCardRankToValue(myPlayer.hole_cards[1]))>=22){
+            else if((service.convertCardRankToValue(myPlayer.hole_cards[0]) + service.convertCardRankToValue(myPlayer.hole_cards[1]))>=20){
                 System.out.println("IN THIRD IF");
                 return pokerRequest.current_buy_in;
 
