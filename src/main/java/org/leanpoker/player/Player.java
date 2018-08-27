@@ -20,7 +20,6 @@ public class Player {
         if(myPlayer.stack > service.biggestStack(pokerRequest)){
             return service.biggestStack(pokerRequest);
         }
-            System.out.println(myPlayer.hole_cards[0].rank+"     "+myPlayer.hole_cards[1].rank);
         if(myPlayer.hole_cards[0].rank.equals(myPlayer.hole_cards[1].rank)){
             System.out.println("IN FIRST IF");
             return pokerRequest.current_buy_in;
@@ -33,7 +32,7 @@ public class Player {
             System.out.println("IN THIRD IF");
             return pokerRequest.current_buy_in;
         }
-        System.out.println(service.convertCardRankToValue(myPlayer.hole_cards[0])+"      "+service.convertCardRankToValue(myPlayer.hole_cards[1]));
+        System.out.println("converted number 1"+service.convertCardRankToValue(myPlayer.hole_cards[0])+"      converted number2"+service.convertCardRankToValue(myPlayer.hole_cards[1]));
 
 
 
